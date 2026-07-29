@@ -1,4 +1,4 @@
-package org.cortinovis.domain;
+package org.cortinovis.domain.player;
 
 import java.util.List;
 

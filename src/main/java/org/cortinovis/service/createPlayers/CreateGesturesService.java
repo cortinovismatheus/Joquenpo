@@ -1,11 +1,11 @@
-package org.cortinovis.service;
+package org.cortinovis.service.createPlayers;
 
-import org.cortinovis.domain.Gesture;
-import org.cortinovis.domain.Types;
+import org.cortinovis.domain.player.Gesture;
+import org.cortinovis.domain.player.Types;
 
 import java.util.List;
 
-public class CreateGesturesServices {
+public class CreateGesturesService {
 
   public Gesture Pedra() {
     Gesture pedra = new Gesture(
