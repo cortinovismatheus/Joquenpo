@@ -10,6 +10,8 @@ import org.cortinovis.service.selects.SelectGameAction;
 import org.cortinovis.service.selects.SelectGameMode;
 import org.cortinovis.service.selects.SelectGestureService;
 
+import static java.lang.System.out;
+
 public class Main {
   private static final CreateBotPlayerService createBotPlayerService = new CreateBotPlayerService();
   private static final CreatePlayerService createPlayerService = new CreatePlayerService();
@@ -28,7 +30,7 @@ public class Main {
     while(playing){
       playing = playMode();
     }
-    System.out.println("Obrigado por jogar!");
+    out.println("Obrigado por jogar!");
   }
 
   private static boolean playMode(){
@@ -80,26 +82,26 @@ public class Main {
       switch(result){
         case PLAYER1_WIN -> player1.addPoint();
         case PLAYER2_WIN -> player2.addPoint();
-        case DRAW -> System.out.println("Empate! Joguem novamente.");
+        case DRAW -> out.println("Empate! Joguem novamente.");
       }
 
     } while (result == BattleResult.DRAW);
 
-    System.out.println(player1.getName() + " jogou " + player1.getGesture());
-    System.out.println(player2.getName() + " jogou " + player2.getGesture());
+    out.println(player1.getName() + " jogou " + player1.getGesture());
+    out.println(player2.getName() + " jogou " + player2.getGesture());
 
     if (result == BattleResult.PLAYER1_WIN) {
-      System.out.println(player1.getName() + " ganhou!");
+      out.println(player1.getName() + " ganhou!");
     } else {
-      System.out.println(player2.getName() + " ganhou!");
+      out.println(player2.getName() + " ganhou!");
     }
     showScore(player1, player2);
   }
 
   private static void showScore(Player player1, Player player2) {
-    System.out.println("\n===== PLACAR =====");
-    System.out.println(player1.getName() + ": " + player1.getScore());
-    System.out.println(player2.getName() + ": " + player2.getScore());
-    System.out.println("==================\n");
+    out.println("\n===== PLACAR =====");
+    out.println(player1.getName() + ": " + player1.getScore());
+    out.println(player2.getName() + ": " + player2.getScore());
+    out.println("==================\n");
   }
 }
