@@ -24,4 +24,13 @@ public class Gesture {
   public List<Types> getLose() {
     return Lose;
   }
+
+  @Override
+  public String toString() {
+    return switch (type) {
+      case PEDRA -> "Pedra";
+      case PAPEL -> "Papel";
+      case TESOURA -> "Tesoura";
+    };
+  }
 }

@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class SelectGameMode {
   private final Scanner scanner = new Scanner(System.in);
 
-  public GameMode SelectGameMode() {
+  public GameMode selectGameMode() {
 
       while (true) {
         System.out.println("Select a game mode:");

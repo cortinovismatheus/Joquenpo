@@ -11,7 +11,7 @@ public class CreateBotPlayerService {
   private final Random random = new Random();
   private final CreateGesturesService createGesturesService = new CreateGesturesService();
 
-  public Player createBotPlayerService() {
+  public Player createBotPlayer() {
     return new Player("Máquina");
   }
 
